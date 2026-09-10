@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Core Concepts Practice</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/jsx">
+ 
+  //  A component is a small, reusable piece of code that builds a part of the website.
+  // Props are inputs or data that we pass into a component to change what it shows.
+  // When the state changes, React updates the component and shows the new information on the screen automatically.
+
+      function Greeting(props) {
+        return <h2>Hello, {props.name}! Welcome back.</h2>;
+      }
+
+      function Counter() {
+        const [count, setCount] = React.useState(0);
+
+        return (
+          <section>
+            <h3>Click Counter</h3>
+            <p>You clicked {count} times.</p>
+            <button onClick={() => setCount(count + 1)}>Click Me</button>
+          </section>
+        );
+      }
+
+      function App() {
+        return (
+          <main>
+            <h1>React Basics</h1>
+            <Greeting name="Alex" />
+            <Counter />
+          </main>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+</body>
+</html>

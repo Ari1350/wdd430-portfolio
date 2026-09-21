@@ -26,4 +26,4 @@ https://github.com/Ari1350/wdd430-portfolio
 
 This project is deployed with Vercel.
 
-Vercel URL: Add your Vercel URL here.
+Vercel URL: https://wdd430-portfolio-kywalvuss-ari1350s-projects.vercel.app/
